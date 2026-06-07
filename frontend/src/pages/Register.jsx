@@ -31,7 +31,7 @@ function Register() {
       setLoading(true)
       setError('')
       const { data } = await axios.post(
-        'http://localhost:5000/api/users/register',
+        'https://yuvradnivastradalan.onrender.com/api/users/register',
         { name, email, password, phone },
         { withCredentials: true }
       )

@@ -9,7 +9,7 @@ function Products() {
     const fetchProducts = async () => {
       try {
         const { data } = await axios.get(
-          'http://localhost:5000/api/products'
+          'https://yuvradnivastradalan.onrender.com/api/products'
         )
 
         setProducts(data)

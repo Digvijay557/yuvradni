@@ -16,7 +16,7 @@ const Login = () => {
     setLoading(true)
     setError('')
     try {
-      const { data } = await axios.post('http://localhost:5000/api/users/login',
+      const { data } = await axios.post('https://yuvradnivastradalan.onrender.com/api/users/login',
         { email, password },
         { withCredentials: true }
       )

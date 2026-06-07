@@ -63,7 +63,7 @@ const handlePlaceOrder = async () => {
     if (paymentMethod === 'cod') {
 
       const { data } = await axios.post(
-        'http://localhost:5000/api/orders',
+        'https://yuvradnivastradalan.onrender.com/api/orders',
         orderData,
         { withCredentials: true }
       )
@@ -77,7 +77,7 @@ const handlePlaceOrder = async () => {
 
       // Step 1: Create Razorpay order from backend
       // const { data } = await axios.post(
-      //   'http://localhost:5000/api/payment/create-order',
+      //   'https://yuvradnivastradalan.onrender.com/api/payment/create-order',
       //   { amount: totalPrice }
       // )
 
@@ -85,7 +85,7 @@ const handlePlaceOrder = async () => {
 
       // Step 3: After successful payment
       // await axios.post(
-      //   'http://localhost:5000/api/orders',
+      //   'https://yuvradnivastradalan.onrender.com/api/orders',
       //   {
       //     ...orderData,
       //     isPaid: true
