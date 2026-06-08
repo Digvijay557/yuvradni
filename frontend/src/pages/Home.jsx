@@ -41,13 +41,19 @@ export default function Home() {
   const [products, setProducts] = useState([])
   useEffect(() => {
   const fetchProducts = async () => {
-    const { data } = await axios.get(
-      'https://yuvradnivastradalan.onrender.com/api/products'
-    )
-
-    setProducts(data)
+    try {
+      const { data } = await axios.get(
+        'https://yuvradnivastradalan.onrender.com/api/products'
+      )
+      setProducts(data)
+    } catch (err) {
+      if (err.response?.status === 401) {
+        setUser(null)
+      } else {
+        console.error(err)
+      }
+    }
   }
-
   fetchProducts()
 }, [])
   

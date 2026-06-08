@@ -62,14 +62,21 @@ const handlePlaceOrder = async () => {
 
     if (paymentMethod === 'cod') {
 
-      const { data } = await axios.post(
-        'https://yuvradnivastradalan.onrender.com/api/orders',
-        orderData,
-        { withCredentials: true }
-      )
+        try {
+          const { data } = await axios.post(
+            'https://yuvradnivastradalan.onrender.com/api/orders',
+            orderData,
+            { withCredentials: true }
+          )
 
-      console.log('COD Order Created:', data)
-      setSuccess(true)
+          console.log('COD Order Created:', data)
+          setSuccess(true)
+        } catch (postErr) {
+          console.log('Error creating COD order:', postErr.response?.data || postErr.message)
+          // optionally show user-friendly message
+          alert('Failed to create order. Please try again.')
+          return
+        }
 
     } else if (paymentMethod === 'online') {
 
