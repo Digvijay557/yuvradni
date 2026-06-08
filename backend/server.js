@@ -25,6 +25,9 @@ app.use('/api/orders', orderRoutes)
 
 
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://yuvradni-pmv26epnk-digvijay-bhaskar-shelkes-projects.vercel.app'],
+  origin: [
+    'http://localhost:5173',
+    'https://yuvradni.vercel.app'
+  ],
   credentials: true
 }))
