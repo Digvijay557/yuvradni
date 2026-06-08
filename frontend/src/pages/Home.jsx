@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import heroImg from '../assets/hero.png'
-import heroMobile from '../assets/heroMobile.png'
-import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 export default function Home() {
@@ -65,7 +62,7 @@ export default function Home() {
   <div
     className="hidden md:block absolute inset-0 bg-cover bg-center"
     style={{
-      backgroundImage: `url(${heroImg})`
+      backgroundImage: `url(https://res.cloudinary.com/dyhbhphta/image/upload/v1780883982/ChatGPT_Image_Jun_3_2026_11_18_07_AM_cvxe9q.png)`
     }}
   />
 
@@ -73,7 +70,7 @@ export default function Home() {
   <div
     className="md:hidden absolute inset-0 bg-cover bg-center"
     style={{
-      backgroundImage: `url(${heroMobile})`
+      backgroundImage: `url(https://res.cloudinary.com/dyhbhphta/image/upload/v1780883979/yuvradni_saree_high_quality_zvd080.png)`
     }}
   />
 
