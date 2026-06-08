@@ -8,7 +8,7 @@ import {
 
 const AppContext = createContext();
 
-const API = "http://localhost:5000";
+const API = import.meta.env.VITE_API_URL;
 
 export const AppProvider = ({ children }) => {
   const [user, setUser] = useState(null);
